@@ -1,4 +1,5 @@
 Fibonacci_benchmark
 ===================
 
-benchmark with Fibonacci
+*simple benchmark with Fibonacci  
+*currently provide c++/java/nodejs/php/python version  
