@@ -1,5 +1,5 @@
-Fibonacci_benchmark
+Fibonacci-benchmark
 ===================
 
-simple benchmark with Fibonacci  
-currently provide c++ / java / nodejs / php / python version  
+Simple benchmark with Fibonacci number
+currently implemented c++ / java / nodejs / php / python version  
