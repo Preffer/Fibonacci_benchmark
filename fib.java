@@ -18,9 +18,9 @@ public class fib {
 		}
 	}
 
-	public static double fib(double current){
-		if(current >= 3){
-			return fib(current-1) + fib(current-2);
+	public static double fib(double n){
+		if(n >= 3){
+			return fib(n-1) + fib(n-2);
 		} else{
 			return 1;
 		}

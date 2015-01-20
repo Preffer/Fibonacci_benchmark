@@ -6,7 +6,7 @@
 using namespace std;
 using namespace boost;
 
-inline double fib(double current);
+inline double fib(double n);
 
 int main(int argc, char **argv) {
 	if(argc != 2){
@@ -29,9 +29,9 @@ int main(int argc, char **argv) {
 	return EXIT_SUCCESS;
 }
 
-inline double fib(double current) {
-	if(current >= 3){
-		return fib(current -1) + fib(current-2);
+inline double fib(double n) {
+	if(n >= 3){
+		return fib(n-1) + fib(n-2);
 	} else{
 		return 1;
 	}

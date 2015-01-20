@@ -5,9 +5,9 @@ if($argc != 2){
 	exit(1);
 }
 
-function fib($current){
-	if($current >= 3){
-		return fib($current-1) + fib($current-2);
+function fib($n){
+	if($n >= 3){
+		return fib($n-1) + fib($n-2);
 	} else{
 		return 1;
 	}
