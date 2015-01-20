@@ -10,7 +10,7 @@ inline double fib(double current);
 
 int main(int argc, char **argv) {
 	if(argc != 2){
-		cout << "Usage: ./main <n>" << endl;
+		cout << "Usage: ./fib <n>" << endl;
 		return EXIT_FAILURE;
 	}
 	int start = atoi(argv[1]);
@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 
 inline double fib(double current) {
 	if(current >= 3){
-		return fib(current-1) + fib(current-2);
+		return fib(current -1) + fib(current-2);
 	} else{
 		return 1;
 	}

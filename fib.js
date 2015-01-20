@@ -1,22 +1,25 @@
 'use strict';
 
-function calc(current){
+if(process.argv.length != 3){
+	console.log('Usage: nodejs fib.js <n>')
+	process.exit(1);
+}
+
+var start = process.argv[2];
+var tpstart, tpend, timeuse, result;
+
+function fib(current){
 	if(current >= 3){
-		return calc(current-1) + calc(current-2);
+		return fib(current-1) + fib(current-2);
 	} else{
 		return 1;
 	}
 }
 
-var start = 45;
-var tpstart, tpend, timeuse, result;
-
 for(var i = 1; i <= start; i++){
-	var myDate = new Date();
-	tpstart = myDate.getTime();
-	result = calc(i);
-	myDate = new Date();
-	tpend = myDate.getTime();
-	timeuse = (tpend - tpstart)/1000;
-	console.log("Calc to: " + i + " Result: " + result + " Elapsed: " + timeuse);
+	tpstart = Date.now();
+	result = fib(i);
+	tpend = Date.now();
+	timeuse = (tpend - tpstart) / 1000;
+	console.log('Calculated Fib(' + i + ') = ' + result + ', Time Used: ' + timeuse + 's');
 }

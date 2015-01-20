@@ -1,21 +1,25 @@
 <?php
 
-function calc($current){
+if($argc != 2){
+	echo('Usage: php fib.php <n>\n');
+	exit(1);
+}
+
+function fib($current){
 	if($current >= 3){
-		return calc($current-1) + calc($current-2);
+		return fib($current-1) + fib($current-2);
 	} else{
 		return 1;
 	}
 }
 
-$start = 40;
-
+$start = $argv[1];
 for($i = 1; $i <= $start; $i++){
 	$tpstart = gettimeofday(true);
-	echo("Calc to: " . $i . " Result: " . calc($i));
+	$result = fib($i);
 	$tpend = gettimeofday(true);
-	$timeuse = $tpend - $tpstart; 
-	echo(" Elapsed: " . $timeuse . "\n");
+	$timeuse = $tpend - $tpstart;
+	echo("Calculated Fib($i) = $result, Time Used: $timeuse s\n");
 }
 
 ?>
