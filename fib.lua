@@ -11,10 +11,11 @@ if #arg ~= 1 then
 	return 1
 end
 
-for i = 1, tonumber(arg[1]) do
+stop = tonumber(arg[1])
+for i = 1, stop do
 	tpstart = os.clock()
 	result = fib(i)
 	tpend = os.clock()
 	timeuse = tpend - tpstart
-	print(string.format("Calculated Fib(%d) = %f, Time Used: %f s", i, result, timeuse))
+	print(string.format("Calculated Fib(%d) = %f, Time Used: %fs", i, result, timeuse))
 end

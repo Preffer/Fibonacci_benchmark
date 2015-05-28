@@ -12,8 +12,7 @@ if len(sys.argv) != 2:
 	print("Usage: python fib.py <n>")
 	exit()
 
-
-for i in range(1, int(sys.argv[1])):
+for i in range(1, int(sys.argv[1]) + 1):
 	tpstart = time.time()
 	result = fib(i)
 	tpend = time.time()

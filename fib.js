@@ -1,11 +1,11 @@
 'use strict';
 
-if(process.argv.length != 3){
+if (process.argv.length != 3) {
 	console.log('Usage: nodejs fib.js <n>')
 	process.exit(1);
 }
 
-function fib(n){
+function fib(n) {
 	if(n >= 3){
 		return fib(n-1) + fib(n-2);
 	} else{
@@ -13,10 +13,10 @@ function fib(n){
 	}
 }
 
-var start = process.argv[2];
+var stop = process.argv[2];
 var tpstart, tpend, timeuse, result;
 
-for(var i = 1; i <= start; i++){
+for (var i = 1; i <= stop; i++) {
 	tpstart = Date.now();
 	result = fib(i);
 	tpend = Date.now();

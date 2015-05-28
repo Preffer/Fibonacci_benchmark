@@ -9,11 +9,11 @@ namespace fib {
                 Environment.Exit(2);
             }
 
-            int start = int.Parse(args[0]);
+            int stop = int.Parse(args[0]);
             double result;
             Stopwatch timer = new Stopwatch();
 
-            for (int i = 1; i <= start; i++) {
+            for (int i = 1; i <= stop; i++) {
                 timer.Start();
                 result = fib(i);
                 timer.Stop();

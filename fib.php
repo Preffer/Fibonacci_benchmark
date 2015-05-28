@@ -13,13 +13,11 @@ function fib($n){
 	}
 }
 
-$start = $argv[1];
-for($i = 1; $i <= $start; $i++){
+$stop = $argv[1];
+for($i = 1; $i <= $stop; $i++){
 	$tpstart = gettimeofday(true);
 	$result = fib($i);
 	$tpend = gettimeofday(true);
 	$timeuse = $tpend - $tpstart;
 	echo("Calculated Fib($i) = $result, Time Used: $timeuse s\n");
 }
-
-?>

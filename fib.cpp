@@ -13,11 +13,11 @@ int main(int argc, char **argv) {
 		cout << "Usage: ./fib <n>" << endl;
 		return EXIT_FAILURE;
 	}
-	int start = atoi(argv[1]);
+	int stop = atoi(argv[1]);
 	timer t;
 	double result;
 
-	for (int i = 1; i <= start; i++){
+	for (int i = 1; i <= stop; i++){
 		t.restart();
 		result = fib(i);
 		cout << format("Calculated Fib(%1%) = %2%, Time Used: %3%s") % i % result % t.elapsed() << endl;

@@ -6,10 +6,10 @@ public class fib {
 			System.exit(1);
 		}
 
-		int start = Integer.parseInt(args[0]);
+		int stop = Integer.parseInt(args[0]);
 		double tpstart, tpend, timeuse, result;
 
-		for(int i = 1; i <= start; i++){
+		for(int i = 1; i <= stop; i++){
 			tpstart = System.currentTimeMillis();
 			result = fib(i);
 			tpend = System.currentTimeMillis();
